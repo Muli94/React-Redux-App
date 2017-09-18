@@ -1,13 +1,14 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
+import { fetchPosts } from '../actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchPosts } from '../actions';
+
 
 
 class PostsIndex extends Component{
     componentDidMount(){
-        this.props.fetchPosts;
+        this.props.fetchPosts();
     }
     renderPosts(){
         return _.map(this.props.posts, post=>{
@@ -22,7 +23,7 @@ class PostsIndex extends Component{
         return(
             <div>
                 <div className='text-xs-right'>
-                    <Link className='btn btn-primary' to="/posts">
+                    <Link className='btn btn-primary' to='/posts/new'>
                     Add Post
                     </Link>
                 </div>
