@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         <BrowserRouter>
         <div>
             <Switch>
-                <Route path='/' component={PostsIndex} />
-                <Route path='/posts/new' component={PostNew} />
+                <Route exact path='/' component={PostsIndex} />
+                <Route path='/posts' component={PostNew} />
             </Switch>
         </div>
         </BrowserRouter>
