@@ -1,6 +1,6 @@
 module.exports={
     entry:[
-        './src/index.js'
+        './src/index.jsx'
     ],
     output:{
         path:__dirname,
@@ -9,12 +9,15 @@ module.exports={
     },
     module:{
         loaders:[{
-            exclude: /node_modules/,
+            test: /\.(js|jsx)$/, exclude: /node_modules/,
             loader:'babel-loader',
             query: {
-                presets: ['react', 'es2015', 'stage-1']
+                presets: ['es2015', 'stage-1', 'react']
             }
         }]
+    },
+    resolve:{
+        extensions: ['.js', '.jsx']
     },
     devServer:{
         historyApiFallback:true,

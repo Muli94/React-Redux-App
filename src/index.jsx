@@ -6,9 +6,9 @@ import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
 
 import reducers from './reducers';
-import PostsIndex from './components/posts_index';
-import PostNew from './components/post_new';
-import PostShow from './components/post_show';
+import PostsIndex from './components/posts_index.jsx';
+import PostNew from './components/post_new.jsx';
+import PostShow from './components/post_show.jsx';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
