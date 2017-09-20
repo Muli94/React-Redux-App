@@ -9,7 +9,7 @@ class PostShow extends Component{
         //this.props.match.params.id;
         this.props.fetchPost(id);
     }
-    onDeleteClick=()=>{
+    onDeleteClick = () =>{
         const { id } = this.props.match.params;
         this.props.deletePost(id, ()=>{
             this.props.history.push('/');
@@ -26,10 +26,7 @@ class PostShow extends Component{
         return(
             <div>
                 <Link to='/'>Back To Index</Link>
-                <button
-                    className='btn btn-danger pull-xs-right'
-                    onClick={this.onDeleteClick}
-                >
+                <button className='btn btn-danger pull-xs-right' onClick={this.onDeleteClick}>
                     Delete Post
                 </button>
                 <h3>{post.title}</h3>
