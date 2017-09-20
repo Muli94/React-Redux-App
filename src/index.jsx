@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <BrowserRouter>
         <div className="container">
           <Switch>
+            <Route exact path="/" component={PostsIndex} />
             <Route path="/posts/new" component={PostNew} />
-            <Route path="/posts/:id" component={PostShow} />
-            <Route path="/" component={PostsIndex} />
+            <Route path="/posts/:id" component={PostShow} /> 
           </Switch>
         </div>
       </BrowserRouter>
