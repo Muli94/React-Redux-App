@@ -14,7 +14,9 @@ export default function(state={}, action){
         
         //return { ...state, [action.payload.data]: action.payload.data };
     case FETCH_POSTS:
-        return _.mapKeys(action.payload.data, 'id');
+        const ne = _.mapKeys(action.payload.data, 'id');
+        console.log(action.payload.data, ne);
+        return ne;
     default:
         return state;
     }

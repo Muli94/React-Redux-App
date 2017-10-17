@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-
 class PostsIndex extends Component{
     componentDidMount(){
         this.props.fetchPosts();
